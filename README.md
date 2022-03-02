@@ -6,4 +6,3 @@ If you find any mistakes or bugs please let me know.
 
 There are lot of resources provided by the authors at the book companion website.
 Website https://www.statlearning.com/ companion for the book, hosts pdf version of the book and can be downloaded from the link https://hastie.su.domains/ISLR2/ISLRv2_website.pdf
- 
