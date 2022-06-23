@@ -1,0 +1,27 @@
+#chapter 2 excercise, Quesrtion No. 8
+colleges <- read.csv("College.csv")
+head(colleges)
+summary(colleges)
+View(colleges)
+rownames(colleges) <-colleges[,1]
+View(colleges)
+colleges <-colleges[,-1]
+View(colleges)
+summary(colleges)
+pairs(colleges[,1:10])
+attach(colleges)
+Private <- as.factor(Private)
+plot(Private,Outstate, varwidth=T, xlab="private", ylab="Out of state tution", main="Out of state tution in public vs pvt colleges")
+Elite <- rep("NO", nrow(colleges))
+Elite[colleges$Top10perc>50] <- "yes"
+Elite <- as.factor(Elite)
+colleges <-data.frame(colleges,Elite)
+summary(college)
+plot(Elite, Outstate, varwidth=T, xlab="Elite", ylab="Out of state tution", main="Out of state tution in public vs Elite colleges")
+#View(colleges)
+par(mfrow = c(2, 2))
+hist(PhD,25)
+hist(Personal,25)
+hist(Outstate,25)
+hist(Grad.Rate,25)
+plot(Elite, Expend, xlab="Elite", ylab="Expense", main="comparision of expence in Non-Elite and Elite colleges")

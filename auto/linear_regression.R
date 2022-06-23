@@ -1,0 +1,13 @@
+#linear regression on auto data set
+auto<-read.csv("Auto.csv", na.strings = "?", stringsAsFactors = T)
+View(auto)
+attach(auto)
+linear.fit<-lm(mpg ~ horsepower, data=auto)
+summary(linear.fit)
+predict(linear.fit, data.frame(horsepower=98), interval = "confidence")
+predict(linear.fit,data.frame(horsepower=98), intercal= "prediction")
+dev.off()
+plot(mpg, horsepower)
+abline(linear.fit, lw=3, col='red')
+par(mfrow=c(2,2))
+plot(linear.fit)

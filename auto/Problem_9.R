@@ -1,0 +1,11 @@
+auto<- read.table('Auto.data',header = T, na.strings = "?", stringsAsFactors = T)
+auto<-na.omit(auto)
+attach(auto)
+summary(auto)
+range(cylinders)
+range(horsepower)
+range(weight)
+range(acceleration)
+auto<-auto[-(10:84),]
+summary(auto)
+pairs(~mpg+displacement+horsepower+weight, data=auto, main="correlation between parameters")
